@@ -4,6 +4,7 @@ python:
 env:
   - PORTAGE_VER="2.2.26"
 script:
+  - env | sort
   - echo "all good"
 
 notifications:
