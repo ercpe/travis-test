@@ -1,0 +1,14 @@
+language: python
+python:
+  - pypy
+env:
+  - PORTAGE_VER="2.2.26"
+script:
+  - echo "all good"
+
+notifications:
+  irc:
+    channels: "chat.freenode.net#not-your-server.de"
+    template:
+      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{commit_subject} - %{message}"
+      - "Diff: %{compare_url} - Build details : %{build_url}"
