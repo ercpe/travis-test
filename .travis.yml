@@ -11,7 +11,6 @@ notifications:
   irc:
     channels: "chat.freenode.net#not-your-server.de"
     template:
-      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{commit_subject} - %{message}"
-      - "Diff: %{compare_url} - Build details : %{build_url}"
-      - "trying env: $TRAVIS_PYTHON_VERSION %{TRAVIS_PYTHON_VERSION}"
+      - "%{repository}#%{build_number} (%{branch} - %{commit}) - %{author}: %{commit_subject}"
+      - "%{message} - Build details : %{build_url}"
     use_notice: true
